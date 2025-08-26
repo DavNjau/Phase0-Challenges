@@ -3,7 +3,7 @@ exclusivePrice
 taxRate 
 inclusivePrice
 
-inclusivePrice = exclusivePrice  + taxRate
+inclusivePrice = exclusivePrice  + (taxRate *exclusivePrice)
 */
 
 
@@ -12,26 +12,10 @@ const taxRate = 0.16;
 const exclusivePriceInput = document.getElementById("input-field")
 const result = document.getElementById("result-container")
 
-/*
-function inclusivePrice(exclusivePrice, taxRate){
-   const price = exclusivePrice + (exclusivePrice * taxRate);
-   return price
-}
-
-pressButton.addEventListener("click", () =>{
-   return function inclusivePrice()
-   }
-*/
-
-
 function inclusivePrice(exclusivePrice, taxRate){
    const price = exclusivePrice + (exclusivePrice * taxRate);
    return price;
 }
-
-/*
- The issue with my code was the event listener.
-*/
 
 pressButton.addEventListener("click", () => {
    const exclusiveValue = parseFloat(exclusivePriceInput.value);
