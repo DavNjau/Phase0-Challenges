@@ -6,11 +6,6 @@ const inclusivePrice(exclusivePrice, taxRate) = () => {
 const inclusivePrice = exclusivePrice + (exclusivePrice * taxRate);
 */
 
-/*
-my initial problem was that i used console log inside the function instead of returning the value
-and then i was trying to log the function call which was returning undefined
-*/
-
 const exclusivePrice = [1000, 2000, 3000];
 const taxRate = 0.16;
 
